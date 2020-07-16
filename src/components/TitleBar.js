@@ -11,7 +11,7 @@ export default class TitleBar extends React.Component {
           <h1>Fun Gif Generator</h1>
           <p>
             Using the giphy API to fetch fun gifs (and practicing using React
-            classes instead of functions).
+            classes instead of functions)
           </p>
         </Container>
       </Jumbotron>
