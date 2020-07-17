@@ -11,8 +11,8 @@ class App extends React.Component {
     this.changeMode = this.changeMode.bind(this);
   }
 
-  changeMode(mode) {
-    this.setState({ darkMode: !mode });
+  changeMode() {
+    this.setState({ darkMode: !this.state.darkMode });
   }
 
   render() {
