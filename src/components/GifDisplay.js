@@ -2,7 +2,7 @@ import React from "react";
 
 import Container from "react-bootstrap/Container";
 
-export class GifDisplay extends React.Component {
+export default class GifDisplay extends React.Component {
   render() {
     return (
       <Container>
