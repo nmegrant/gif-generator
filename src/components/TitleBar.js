@@ -23,7 +23,14 @@ export default class TitleBar extends React.Component {
             classes instead of functions)
           </p>
         </Container>
-        <Switch onChange={this.props.modeChange} checked={this.props.mode} />
+        <Switch
+          onChange={this.props.modeChange}
+          checked={this.props.mode}
+          checkedIcon={false}
+          uncheckedIcon={false}
+          onColor="#c4fdff"
+          offColor="#222"
+        />
       </Jumbotron>
     );
   }
