@@ -3,6 +3,8 @@ import React from "react";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Container from "react-bootstrap/Container";
 
+import Switch from "react-switch";
+
 export default class TitleBar extends React.Component {
   render() {
     return (
@@ -14,7 +16,10 @@ export default class TitleBar extends React.Component {
             classes instead of functions)
           </p>
         </Container>
+        <Switch />
       </Jumbotron>
     );
   }
 }
+
+// mode={this.state.darkMode} modeChange={this.changeMode}
