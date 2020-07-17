@@ -3,14 +3,17 @@ import "./App.css";
 import axios from "axios";
 import DataForm from "./components/DataForm";
 import TitleBar from "./components/TitleBar";
-import { GifDisplay } from "./components/GifDisplay";
+import GifDisplay from "./components/GifDisplay";
+import Alert from "react-bootstrap/Alert";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { darkMode: false, src: "" };
+    this.state = { darkMode: false, src: "", alert: false };
     this.changeMode = this.changeMode.bind(this);
     this.changeSrc = this.changeSrc.bind(this);
+    this.changeAlert = this.changeAlert.bind(this);
+    this.wrapper = React.createRef();
   }
 
   changeMode() {
@@ -19,6 +22,13 @@ class App extends React.Component {
 
   changeSrc(newGifSrc) {
     this.setState({ src: newGifSrc });
+  }
+
+  changeAlert() {
+    this.setState({ alert: true });
+    setTimeout(() => {
+      this.setState({ alert: false });
+    }, 1500);
   }
 
   async componentDidMount() {
@@ -46,8 +56,11 @@ class App extends React.Component {
           height: "2000px",
         }}
       >
+        <Alert ref={this.wrapper} variant="danger" show={this.state.alert}>
+          Please enter text to find a gif
+        </Alert>
         <TitleBar mode={this.state.darkMode} modeChange={this.changeMode} />
-        <DataForm srcChange={this.changeSrc} />
+        <DataForm srcChange={this.changeSrc} alertChange={this.changeAlert} />
         <GifDisplay src={this.state.src} />
       </div>
     );

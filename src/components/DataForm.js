@@ -36,6 +36,7 @@ export default class DataForm extends React.Component {
       this.getNewGif(this.state.userInput);
       this.setState({ userInput: "" });
     } else {
+      this.props.alertChange();
       console.log("Enter text to see a gif!");
     }
   }
