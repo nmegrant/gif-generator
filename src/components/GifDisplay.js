@@ -13,6 +13,7 @@ export class GifDisplay extends React.Component {
           frameBorder="0"
           className="giphy-embed"
           allowFullScreen
+          title="myGif"
         ></iframe>
         <p>
           <a href="https://giphy.com/gifs/fun-XOXdQszYm4I3m">via GIPHY</a>
