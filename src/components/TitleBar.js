@@ -7,9 +7,15 @@ import Switch from "react-switch";
 
 export default class TitleBar extends React.Component {
   render() {
-    console.log(this.props.mode);
     return (
-      <Jumbotron fluid style={{ padding: "10px", margin: "10px" }}>
+      <Jumbotron
+        fluid
+        style={{
+          padding: "10px",
+          margin: "10px",
+          backgroundColor: "rgba(81, 207, 245, 0.7)",
+        }}
+      >
         <Container>
           <h1>Fun Gif Generator</h1>
           <p>
@@ -22,5 +28,3 @@ export default class TitleBar extends React.Component {
     );
   }
 }
-
-// mode={this.state.darkMode} modeChange={this.changeMode}
