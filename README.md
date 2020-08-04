@@ -1,8 +1,20 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Purpose
+
+1. Practice using React Class components. I learned react using Function Components (with hooks). But I've seen a lot of code that uses the class components so I wanted to be more familiar with them. I used this project to get comfortable with the syntax and to use lifecycle methods.
+2. Dockerize a React app - I have used docker to run containers for backend databases, but I wanted to get more experience creating a Dockerfile that can be used to generate an image. 
+3. Practice working with a 3rd party API - in this case GIPHY. 
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `docker build . -t <tag>:gif-generator`
+
+Builds a docker image.
+
+### `docker run -it -p 3001:3000 <tag>:gif-generator`
+
+Create a container from the generated image (see above command). Go to http://localhost:3001/ to see the app. 
 
 ### `npm start`
 
@@ -66,3 +78,5 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
